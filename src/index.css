@@ -1,13 +1,91 @@
 :root {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+}
+
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	height: 100%;
+	font-family: Helvetica, sans-serif;
+}
+.outerContainer {
+	width: 100%;
+	padding: 30px;
+	& img {
+		width: 100%;
+		height: auto;
+		object-fit: contain;
+	}
+	@media (max-width: 1024px) {
+		font-size: 2rem;
+	}
+}
+.formContainer {
+	position: relative;
+	padding: 10px;
+}
+.steps {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 1rem;
+}
+.buttonContainer {
+	margin-top: 20px;
+	display: flex;
+	gap: 10px;
+	justify-content: flex-end;
+	& button {
+		font-size: inherit;
+		padding: 4px 5px;
+	}
+}
+.nameForm {
+	display: flex;
+	flex-direction: column;
+	@media (max-width: 1024px) {
+		margin-top: 20px;
+	}
+	& input {
+		margin-top: 10px;
+		width: 200px;
+		font-size: inherit;
+		@media (max-width: 1024px) {
+			width: 100%;
+		}
+	}
+}
+.foodForm {
+	display: flex;
+	flex-direction: column;
+	& p {
+		margin-bottom: 20px;
+	}
+}
+input[type="radio"] {
+	margin-right: 10px;
+}
+select {
+	font-size: inherit;
+	@media (max-width: 1024px) {
+		font-size: 20px;
+		margin-top: 20px;
+	}
 }
